@@ -1,11 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Contact = () => {
+class Logout extends Component {
+render() {
+    localStorage.clear();
+    <h1>Logged Out Successfully</h1>
   return (
-    <section className="Contact">
-      <h1>This is the Contact page</h1>
-    </section>
-  );
-};
+  <label>     <h1>Logged Out Successfully</h1>
+                 </label>
 
-export default Contact;
+  );
+}
+}
+
+export default Logout;

@@ -13,6 +13,36 @@
   }
 }
 
+
+.myStyle {
+             flex: 1;
+             display: -webkit-box;
+             display: -moz-box;
+             display: -ms-flexbox;
+             display: -webkit-flex;
+             display: flex;
+             flex-direction: row;
+             align-items: stretch;
+             overflow-x: auto;
+             overflow-y: hidden;
+             -webkit-overflow-scrolling: touch;
+             height: 100%;
+             scrollbar-width: none;
+             -ms-overflow-style: none;
+             -webkit-flex: 1;
+             -webkit-box-orient: horizontal;
+             -webkit-box-direction: normal;
+             -webkit-flex-direction: row;
+             -webkit-box-align: stretch;
+             -webkit-align-items: stretch;
+         }
+
+
+.activeLink {
+    color: red;
+    border-bottom: 4px solid black;
+ }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
