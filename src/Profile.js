@@ -8,6 +8,7 @@ function handleChange(){
         window.location.href='/logout ';
       }
     const token = localStorage.getItem('token');
+    const userName = localStorage.getItem('userName');
     const DATA = [
     	{
     		vid: "qIqzgS676m8",
@@ -37,7 +38,7 @@ return (
 
         <div className='player-wrapper'>
         <label>
-                    Welcome : {token}
+                    Welcome : {userName}
                 </label><br/><br/>
             {renderVideo()}
             <br/>

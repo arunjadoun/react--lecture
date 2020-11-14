@@ -7,55 +7,62 @@ class Login extends Component {
 
   // handle button click of login form
 
+  constructor(props){
+  super(props)
+
+  this.state ={
+    username: '',
+    password: ''
+  }
+  }
+
     handleSubmit = event => {
         event.preventDefault();
-
-        const user = {
-          name: this.state.name,
-          password: this.state.password
-        }
+        console.log(this.state)
 
         const headers = {
                 'Content-Type': 'application/json',
                 'Accept': '*/*'
             };
 
-        axios.post('http://15.206.68.72:8080/login', { user }, { headers })
+        axios.post('http://15.206.68.72:8080/login', this.state, { headers })
           .then(response=>{
             console.log(response);
             console.log(response.data);
             console.log(response.data.token);
             if (response.data.code < 200 || response.data.code >= 300) {
-                                          throw new Error(response.statusText);
+                                          console.log('Login Failed')
+                                          alert('Login Failed')
                                       }
                                       else if (response.status == 200) {
                                                                                 console.log('ckkfdhkjheck this: '+response.data.token);
                                                                                 localStorage.setItem('token', response.data.token);
+                                                                                localStorage.setItem('userName', response.data.userName);
                                                                                 window.location.href='/profile';
 
                                                                             }
           })
-          .then(response => {
-
-
-                      })
-                      .then(auth => {
-                      });
+          .catch(err => {
+              // what now?
+              alert('Login failed')
+              console.log('Login failed')
+              console.log(err);
+          });
       }
     handleChange = event =>{
-        this.setState({ name: event.target.value});
-        this.setState({ password: event.target.value});
+        this.setState({ [event.target.name]: event.target.value });
       }
 
   render(){
+  const { username, password } = this.state
   return (
     <form onSubmit = { this.handleSubmit }>
                <label> User Name:
-                 <input type = "text" name = "name" onChange= {this.handleChange}/>
+                 <input type = "text" name = "username" value={username} onChange= {this.handleChange}/>
                </label>
 
                 <label> Password:
-                                 <input type = "text" name = "password" onChange= {this.handleChange}/>
+                                 <input type = "text" name = "password" value={password} onChange= {this.handleChange}/>
                                </label>
 
 
