@@ -20,7 +20,7 @@ class Login extends Component {
                 'Accept': '*/*'
             };
 
-        axios.post('http://localhost:8080/login', { user }, { headers })
+        axios.post('http://15.206.68.72:8080/login', { user }, { headers })
           .then(response=>{
             console.log(response);
             console.log(response.data);
@@ -52,11 +52,11 @@ class Login extends Component {
     <form onSubmit = { this.handleSubmit }>
                <label> User Name:
                  <input type = "text" name = "name" onChange= {this.handleChange}/>
-               </label><br/><br/>
+               </label>
 
                 <label> Password:
                                  <input type = "text" name = "password" onChange= {this.handleChange}/>
-                               </label><br/><br/>
+                               </label>
 
 
                <button type = "submit"> Login </button>
