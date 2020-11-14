@@ -64,16 +64,16 @@ class Signup extends Component {
                <label>  Name:
                                 <input type = "text" name = "name" value={name} onChange= {this.handleChange}/>
                               </label>
-               <label> User Name:
+               <label> Gender:
                                 <input type = "text" name = "gender" value={gender} onChange= {this.handleChange}/>
                               </label>
-               <label> User Name:
+               <label> Email:
                                 <input type = "text" name = "email" value={email} onChange= {this.handleChange}/>
                               </label>
-               <label> User Name:
+               <label> Mobile:
                                 <input type = "text" name = "mobile" value={mobile} onChange= {this.handleChange}/>
                               </label>
-               <label> User Name:
+               <label> Date Of Birth:
                                 <input type = "date" name = "dob" value={dob} onChange= {this.handleChange}/>
                               </label>
                <label> User Name:
