@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.1.0",
+    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.8.9",
+    "@react-navigation/stack": "^5.12.6",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -14,12 +18,24 @@
     "react": "^17.0.1",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^17.0.1",
+    "react-native": "^0.62.2",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-incall-manager": "^3.2.7",
     "react-native-multiple-video-player": "^1.1.0",
+    "react-native-paper": "^3.9.0",
+    "react-native-reanimated": "^1.8.0",
+    "react-native-safe-area-context": "^0.7.3",
+    "react-native-screens": "^2.7.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-video": "^5.1.0-alpha8",
+    "react-native-webrtc": "^1.75.3",
     "react-player": "^2.6.2",
     "react-router": "^3.2.6",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-webrtc": "^1.0.0",
+    "simplewebrtc-screenshare-application": "^1.0.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -48,5 +64,17 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ]
   }
 }

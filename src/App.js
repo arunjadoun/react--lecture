@@ -13,6 +13,7 @@ import Login from "./Login";
 import Logout from "./Logout";
 import Signup from "./Signup";
 import Profile from "./Profile";
+import Example from "./Example";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
 
 
@@ -41,6 +42,7 @@ function App() {
             <NavLink activeClassName="active" to="/contact">Contact</NavLink>
             <NavLink activeClassName="active" to="/about-us">About</NavLink>
             <NavLink activeClassName="profile" to="/profile">Profile</NavLink>
+            <NavLink activeClassName="example" to="/example">Example</NavLink>
           </div>
           <div className="content">
             <Switch>
@@ -51,6 +53,7 @@ function App() {
               <Route path="/about-us" component={About} />
               <Route path="/register" component={Signup} />
               <Route path="/profile" component={Profile} />
+              <Route path="/example" component={Example} />
             </Switch>
           </div>
         </div>
