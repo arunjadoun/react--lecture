@@ -6,10 +6,12 @@ class Example extends Component {
     this.videoTag = React.createRef()
   }
 
+
+
   componentDidMount() {
     // getting access to webcam
-   navigator.mediaDevices
-    .getUserMedia({video: true, audio: true})
+    const constraints = { audio: true, video: true };
+   navigator.mediaDevices.getUserMedia(constraints)
     .then(stream => this.videoTag.current.srcObject = stream)
     .catch(console.log);
   }
