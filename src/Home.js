@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <section className="Home">
-      <h1>This is the homepage</h1>
+      {/* <h3>Learning is Fun</h3> */}
     </section>
   );
 };

@@ -14,37 +14,59 @@ import Logout from "./Logout";
 import Signup from "./Signup";
 import Profile from "./Profile";
 import Example from "./Example";
-import { Nav, Navbar, NavItem } from "react-bootstrap";
-
-
+import background from "./img/home.jpeg";
+import Footer from './Footer'
+import SocialFollow from './SocialFollow'
+import T from './T'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
+import 'react-accessible-accordion/dist/fancy-example.css';
+import {Img} from 'react-image'
+import { Button } from 'react-bootstrap';
 
 function App() {
     const isLoggedIn = localStorage.getItem('token');
+    const dd = {
+      width: '64.7%',
+      height: '100px',
+      position: 'relative',
+      left: '17.7%',
+    }
+    const divStyle = {
+      width: '100%',
+      height: '500px',
+      backgroundImage: `url(${background})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize: 'contain'   
+    };
+    const facebook = {
+      width: '1%',
+      height: '5px',
+      backgroundImage: `url(${background})`,
+      backgroundRepeat: 'no-repeat',
+      flex: 1
+      
+      
+    };
   return (
-    <div className="App">
+    <div>
+      <div className="middle">
       <BrowserRouter>
-        <div>
-          <div className="header">
-            <NavLink exact activeClassName="active" to="/">Home</NavLink>
+        <div >
+          <div className="header" style={{ display: "flex" }}>
+           <SocialFollow/>
 
-            {isLoggedIn ? (
-                    <label></label>
-                  ) : (
-                    <NavLink activeClassName="active" to="/login">Login</NavLink>
-                  )}
-
-            {isLoggedIn ? (
-                    <label></label>
-                  ) : (
-                    <NavLink activeClassName="active" to="/register">Register</NavLink>
-                  )}
-
-            <NavLink activeClassName="active" to="/contact">Contact</NavLink>
-            <NavLink activeClassName="active" to="/about-us">About</NavLink>
-            <NavLink activeClassName="profile" to="/profile">Profile</NavLink>
-            <NavLink activeClassName="example" to="/example">Example</NavLink>
+            
+            
           </div>
-          <div className="content">
+          
+          <div className="contenty">
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/login" component={Login} />
@@ -58,6 +80,12 @@ function App() {
           </div>
         </div>
       </BrowserRouter>
+      </div>
+      <T/>
+      {/* <Footer/> */}
+    
+    
+    
     </div>
   );
 }

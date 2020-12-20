@@ -13,6 +13,59 @@
   }
 }
 
+.side {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.social-container {
+  background: #eee;
+  padding: 25px 50px;
+}
+
+.background-image {
+  background-image: url(./img/home.jpeg);
+  background-size: cover;
+  background-position: top;
+  min-height: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: black;
+}
+
 
 .myStyle {
              flex: 1;
