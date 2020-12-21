@@ -135,15 +135,6 @@ function T() {
                
         </div>
 
-        <div className="row">
-                {/* Col 1 */}
-                <div className="col">
-                    <SocialFollow/>
-                </div>
-                
-               
-               
-        </div>
 
         <br/>
         

@@ -12,12 +12,12 @@ export default function SocialFollow() {
     <div class="social-container" style={{ marginLeft: "auto" }}>
       {/* <h5>Social Follow</h5> */}
       <div className="row">
-          <div className="col">
+          {/* <div className="col">
       <a href="https://www.youtube.com/c/jamesqquick"
   className="youtube social">
   <FontAwesomeIcon icon={faYoutube} size="2x" />
-    </a></div>
-    <div className="col">
+    </a></div> */}
+    <div className="col" style={{fontWeight: 'bold'}}>Follow Us On
     <a href="https://www.facebook.com/learnbuildteach/"
     className="facebook social">
     <FontAwesomeIcon icon={faFacebook} size="2x" />
