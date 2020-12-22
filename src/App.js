@@ -60,6 +60,9 @@ function App() {
       <BrowserRouter>
         <div >
           <div className="header" style={{ display: "flex" }}>
+          <div style={{fontWeight: 'bold', fontStyle: 'italic', fontSize: 20}}>
+          EDTECH
+          </div>
            <SocialFollow/>
 
             
@@ -81,8 +84,19 @@ function App() {
         </div>
       </BrowserRouter>
       </div>
-      <T/>
+      <div>
+      <T/></div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       {/* <Footer/> */}
+  <Footer/>
+
     
     
     
