@@ -132,6 +132,7 @@ function T() {
                 <div className="col">
                 <Button variant="dark" size="lg">Download Curriculum</Button>{' '}
                 </div>
+                
                
         </div>
 
@@ -144,6 +145,7 @@ function T() {
         <br/>
         </div>
     </div>
+    
     
   </div>
 );

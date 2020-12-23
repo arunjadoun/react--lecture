@@ -48,9 +48,9 @@ var style = {
     borderTop: "1px solid #E7E7E7",
     textAlign: "center",
     padding: "20px",
-    position: "fixed",
+    position: "absolute",
     left: "0",
-    bottom: "0",
+    bottom: "-200px",
     height: "90px",
     width: "100%",
     backgroundColor: 'black',
@@ -67,8 +67,7 @@ var phantom = {
 
 function Footer({ children }) {
     return (
-        <div>
-            <div style={phantom} />
+            <div style={phantom} >
             <div className="row" style={style}>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '5vh'}}>
 
@@ -103,15 +102,13 @@ function Footer({ children }) {
 
 
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            </div>
             
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
         
-        
-        </div>
     )
 }
 
